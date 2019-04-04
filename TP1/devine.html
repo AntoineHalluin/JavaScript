@@ -1,0 +1,61 @@
+<html>
+     <head>
+          <title>Jeu Devine</title>
+          <script>
+         
+            function nbAlea(min, max) {
+                var nb = min +(max-min+1)*Math.random();
+                return Math.floor(nb);
+          }
+                
+          function devine_manche(min, max)
+          {
+               var nb = nbAlea(min, max); 
+               var manche = 0;  
+               var saisie;  
+               var msg = 'Le nombre a trouver se situe entre ' + min + 'et' + max;
+
+               do
+               {
+                    saisie = prompt(msg);
+                    if(saisie == null)
+                         return 0;
+
+                    manche++;
+                    if(saisie > nb)
+                         msg = "C'est moins";
+                    else
+                         msg = "C'est plus";
+               }
+               while(saisie != nb);
+               return manche;
+          }
+                
+          function devine_partie(min, max)
+          {
+               var manche = 0;
+               var score;
+               var continuer;
+
+               do
+               {
+                    score = devine_manche(min, max); 
+                    if(score)
+                    {
+                         manche++;
+                         continuer = confirm("Bravo, tu as gagne en " + score + " manches.\nVeux-tu rejouer ?");
+                    }
+                    else
+                         continuer = false;
+               }
+               while(continuer);
+               alert("Tu as joue " + manche + " manche(s).");
+          }
+          </script>
+
+
+     </head>
+     <body>
+          <button onclick="javascript:devine_partie(1,100)" style="width:200px;height:50px">Jouer</button>
+     </body>
+</html>

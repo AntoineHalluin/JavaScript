@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+var n = 10;
+
+function start() {
+    var pre = document.getElementById("resultat");
+    var chiffre = Number(document.getElementById("chiffre").value);
+    pre.innerHTML = "";
+    for (var i=1 ; i<=n ; i++) {
+        pre.innerHTML += i + " x " +chiffre + " = " + (i * chiffre) + "\n";
+    }
+}
+
+        </script>
+    </head>
+    <body>
+        <label for="Chiffre">Chiffre</label> :
+        <input type="text" name="chiffre" id="chiffre">        
+        <pre id="resultat"> </pre>
+        <button onclick="start()">Voir la table</button>
+
+    </body>
+</html>
+
