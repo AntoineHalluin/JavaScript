@@ -1,0 +1,77 @@
+<html><head>
+    <title>Formulaire d'inscription</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Dominique Bouillet">
+    <link href="Form1_fichiers/styleDB.css" rel="stylesheet" type="text/css">
+  </head>
+  <script type="text/javascript">
+    function verification() {
+      var nom = document.getElementById('NOM').value;
+      var prenom = document.getElementById('PRENOM').value;
+      var fixe = document.getElementById('FIXE').value;
+      var mobile = document.getElementById('MOBILE').value;
+      var email = document.getElementById('EMAIL').value;
+
+
+      if(nom=="")
+      {
+         alert('Veuillez inscrire votre nom!');
+        document.getElementById('NOM').focus;
+        return false;
+          
+      }
+      if(prenom=="")
+      {
+         alert('Veuillez inscrire votre prenom!');
+        document.getElementById('PRENOM').focus;
+        return false;
+          
+      }      
+    
+            
+      if(email=="")
+      {
+         alert('Veuillez inscrire votre EMAIL!');
+        document.getElementById('EMAIL').focus;
+        return false;
+          
+      }
+
+      if(fixe=="" && mobile=="")
+      {
+        alerte="Saisissez au moins un numero de telephone!";
+        alert(alerte);
+        return false;
+      }
+      else if (fixe != mobile) {
+        return true;
+ 
+      }
+      else
+        return true;
+    }
+    </script>    
+  <body bgcolor="#FFFFFF">
+    <h1 align="center">Exemple de Formulaire d'Inscription</h1>
+    <form name="inscription" method="post" action="http://www-inf.telecom-sudparis.eu/COURS/CSC4501/Exemples/PHP/Affiche.php" onsubmit="return verification(this);">
+    <!-- <form name="inscription" method="post" action="http://www-tp.tem-tsp.eu/~berger_o/Affiche.php"> -->
+      <br><div align="center">
+        <table cols="3" border="0"><tbody><tr><td colspan="3" align="center"><b>Remplir le Questionnaire pour s'inscrire.
+                  <br>(<span class="oblig">*</span> indique un champ obligatoire)</b></td></tr>
+            <tr><td align="right">Nom <span class="oblig">*</span></td><td colspan="2" align="right"><input name="Nom" id="NOM" type="text"></td></tr>
+            <tr><td align="right">Prénom<span class="oblig">*</span></td><td colspan="2" align="right"><input colspan="2" name="Prenom" id="PRENOM" type="text"></td></tr>
+            <tr><td rowspan="3" align="right">Téléphone<span class="oblig">*</span></td><td align="right">Fixe</td>
+              <td align="right"><input colspan="2" name="Fixe"  id="FIXE" type="text"></td></tr>
+            <tr><td align="right">ou</td><td colspan="2"> </td></tr>
+            <tr><td align="right">Mobile</td><td align="right"><input name="Mobile" id="MOBILE" type="text"></td></tr>
+            <tr><td align="right">Email<span class="oblig">*</span></td><td colspan="2" align="right"><input name="Email" id="EMAIL" type="text"></td></tr>
+            <tr><td colspan="2"> </td><td align="center"><input name="Form1" value="Envoyer" type="submit"> 
+                <input name="raz" value="Annuler" type="reset"></td></tr>
+        </tbody></table>
+        
+    </div></form>
+    
+    
+    
+
+</body></html>

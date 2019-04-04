@@ -1,0 +1,15 @@
+body { font-family: Verdana, Arial, Helvetica, sans-serif;color :#0d5a9e; font-size: 14px; text-align: justify;}
+h1 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold;text-align:center; vertical-align: bottom; color: #0d5a9e; line-height: 20px}
+h2 { font-family: Verdana, Arial, Helvetica, sans-serif; color :#0d5a9e; font-size: 16px;text-align:center}
+h3 { font-family: Verdana, Arial, Helvetica, sans-serif; color :#0d5a9e; font-size: 14px}
+td { font-family: Verdana, Arial, Helvetica, sans-serif;color :#0d5a9e; font-size: 12px}
+td.titre { font-family: Verdana, Arial, Helvetica, sans-serif;color :#0d5a9e; font-size: 12px; font-weight: bold; text-align:center}
+p { font-family: Verdana, Arial, Helvetica, sans-serif;color :#0d5a9e; font-size: 12px; text-align: justify}
+
+a { font-family: Verdana, Arial, Helvetica, sans-serif; color : #F88B1C; text-decoration: none}
+a:hover {color : #B50012; text-decoration: underline}
+
+.bf{  background-color: #0D5A9E; color:#E5EFF5; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold}
+.bc{  background-color: #E5EFF5; color:#0D5A9E; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px}
+.code {	font-family: "Courier New", Courier, mono; background-color: #E5EFF5;}
+#oblig {font-family: Verdana, Arial, Helvetica, sans-serif; color : #ff0000;background-color: #E5EFF5; }

@@ -1,0 +1,116 @@
+<html>
+
+<head>
+  <title>Formulaire d'inscription</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="author" content="Dominique Bouillet">
+  <link href="Form3_fichiers/styleDB.css" rel="stylesheet" type="text/css">
+</head>
+<script type="text/javascript">
+  function verification() {
+
+    var pseudo = document.getElementById('PSEUDO').value;
+    var mdp1 = document.getElementById('MDP').value;
+    var mdp2 = document.getElementById('MDP2').value;
+
+  
+
+
+    if (pseudo == "") {
+      alert('Veuillez inscrire votre nom!');
+      document.getElementById('PSEUDO').focus;
+      return false;
+
+    }
+
+    if (mdp1 == "") {
+      alert('Veuillez inscrire votre mot de passe!');
+      document.getElementById('MDP').focus;
+      return false;
+
+    }
+
+    if (mdp2 == "") {
+      alert('Veuillez confirmer votre mot de passe!');
+      document.getElementById('MDP2').focus;
+      return false;
+
+    }
+
+    if (mdp1 != mdp2) {
+      alert('Mot de passe différents !');
+      return false;
+    }
+
+
+    if (document.inscription.candidat.selectedIndex == false) {
+      alert("Veuillez sélectionner un candidat");
+      return false;
+    }
+
+    else
+      return true;
+  }
+
+    
+
+
+</script>
+
+<body bgcolor="#FFFFFF">
+  <h1 align="center">Inscription à un jeu en ligne</h1>
+  <form name="inscription" method="post"
+    action="http://www-inf.telecom-sudparis.eu/COURS/CSC4501/Exemples/PHP/Affiche.php">
+    <br>
+    <div align="center">
+      <table cols="2" border="0">
+        <tbody>
+          <tr>
+            <td colspan="2" align="center"><b>Remplir le Questionnaire pour jouer.
+                <br>(<span class="oblig">*</span> indique un champ obligatoire)</b><br></td>
+          </tr>
+          <tr>
+            <td align="right">Pseudo<span class="oblig">*</span></td>
+            <td align="right"><input type="text" colspan="2" name="Pseudo" id="PSEUDO"></td>
+          </tr>
+          <tr>
+            <td align="right">MotdePasse<span class="oblig">*</span></td>
+            <td align="right"><input type="password" colspan="2" name="MdP" id="MDP" onFocus="javascript:this.value=''"></td>
+          </tr>
+          <tr>
+            <td align="right">MotDePasse (confirmation)<span class="oblig">*</span></td>
+            <td align="right">
+              <input type="password" colspan="2" name="MdP2" id="MDP2" onFocus="javascript:this.value=''"></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center"><b>Choisissez le candidat pour lesquels vous votez</b></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center"><select name="candidat" onchange="return verification(this);this.form.submit()">
+                <option value="0" selected="selected">Choix candidat</option>
+                <option value="1">Johan</option>
+                <option value="2">Marie</option>
+                <option value="2">Armelle</option>
+                <option value="3">Yannick</option>
+                <option value="4">Stéphanie</option>
+                <option value="5">Jo</option>
+                <option value="6">Amel</option>
+                <option value="7">Kathia</option>
+                <option value="8">Kevin</option>
+              </select> <span class="oblig">*</span></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center"><br>
+              <input type="reset" name="raz" value="Annuler"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </form>
+
+
+
+</body>
+
+</html>
